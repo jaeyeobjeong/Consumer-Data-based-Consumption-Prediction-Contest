@@ -1,0 +1,46 @@
+cat_0503_39.csv
+model : CatBoostRegressor(random_state = 0, verbose = 500)
+features :
+['Income', 'Recency', 'NumWebVisitsMonth', 'NumPurchases', 'custer_terms', 'register_age',
+'Kidhome', 'Teenhome', 'Sum_AcceptedCmp', 
+'Education_Master', 'Education_Graduation', 'Education_Basic',
+'Education_PhD', 'Education_2n Cycle', 'Marital_Status_Together',
+'Marital_Status_Single', 'Marital_Status_Married',
+'Marital_Status_Widow', 'Marital_Status_Divorced',
+'Marital_Status_Alone', 'Marital_Status_YOLO', 'Marital_Status_Absurd']
+
+cat_0503_26.csv
+model : CatBoostRegressor(random_state = 0, verbose = 500)
+features :
+['Income', 'NumWebVisitsMonth', 'NumPurchases', 'custer_terms', 'register_age',
+'Kidhome', 'Teenhome', 'Sum_AcceptedCmp', 'Complain',
+'NumDealsPurchases', 'NumWebPurchases', 'NumCatalogPurchases', 'NumStorePurchases',
+'Education_Master', 'Education_Graduation', 'Education_Basic',
+'Education_PhD', 'Education_2n Cycle', 'Marital_Status_Together',
+'Marital_Status_Single', 'Marital_Status_Married',
+'Marital_Status_Widow', 'Marital_Status_Divorced',
+'Marital_Status_Alone', 'Marital_Status_YOLO', 'Marital_Status_Absurd']
+* Sum_AcceptedCmp not include Response
+
+cat_0503_26_sqrt.csv
+* model & features same with cat_0503_26.csv
+* y to np.sqrt(y) when model training
+
+# TO DO LIST
+1. 범주형과 연속형 변수를 나눠서 연산
+2. 부스팅 모델 이외의 모델 성능 TEST
+3. 샘플링을 통해 Data Agmentation
+
+xgb_0509_12_sqrt.csv
+model : XGBRegressor(random_state = 0)
+features:
+['Income', 'NumWebVisitsMonth', 'NumPurchases', 
+'register_age', 'shopping_interval',
+'diff_kid_teen',
+'Sum_AcceptedCmp', 
+'Complain',
+'NumDealsPurchases', 'NumWebPurchases', 'NumCatalogPurchases', 'NumStorePurchases']
+* Sum_AcceptedCmp include Response
+
+cat0326_xgb0912.csv
+cat_0503_26_sqrt.csv & xgb_0509_12_sqrt  : soft_voting
