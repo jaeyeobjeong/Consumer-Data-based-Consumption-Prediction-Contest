@@ -1,6 +1,4 @@
-## Consumer-Data-based-Consumption-Prediction-Contest
-
-주관/주최 : DACON
+## [DACON] 소비자 데이터 기반 소비 예측 경진대회
 
 학습 모델 : CatBoost & XGBoost Regressor <br>
 앙상블 기법 : Hard Voting<br><br> 
